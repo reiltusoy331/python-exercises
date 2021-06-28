@@ -1,3 +1,4 @@
 {
-    "git.enabled": false
+    "git.enabled": false,
+    "python.pythonPath": "C:\\Users\\Reil\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
 }
