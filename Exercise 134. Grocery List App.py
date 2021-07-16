@@ -1,10 +1,15 @@
 import datetime
 
-x = datetime.datetime.now()
+time = datetime.datetime.now()
+month = str(time.month)
+day = str(time.day)
+hour = str(time.hour)
+minute = str(time.minute)
 
-print('=== Grocery List App ===')
 
-print(f'Current Date and Time: {x.strftime("%X")}')
+print('=== Welcome to the Grocery List App ===')
+
+print(f'Current Date and Time: {month}/{day} {hour} {minute}')
 print('You currently have Meat and Cheese in your list.\n')
 
 grocery_list = ['Meat', 'Cheese']
@@ -49,11 +54,11 @@ grocery_list.remove(remove_item3)
 
 print(f'\nCurrent grocery list: {len(grocery_list)} items')
 print(sorted(grocery_list))
-
-print(f'\nSorry, the store is out of {grocery_list[1]}.')
+no_item = grocery_list.pop()
+print(f'\nSorry, the store is out of {no_item}.')
 new_item = input('What food would you like instead: ').title()
 
-grocery_list[1] = new_item
+grocery_list.insert(0, new_item)
 
 print('\nHere is what remains on your grocery list: ')
 print(sorted(grocery_list))

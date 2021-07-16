@@ -1,0 +1,36 @@
+print('\t\t\t=== Welcome to the Basketball Roster Program ===')
+players = []
+pg = input('\nWho is your point guard: ').title()
+players.append(pg)
+sg = input('Who is your shooting guard: ').title()
+players.append(sg)
+sf = input('Who is your small forward: ').title()
+players.append(sf)
+pf = input('Who is your power forward: ').title()
+players.append(pf)
+cn = input('Who is your center: ').title()
+players.append(cn)
+
+print(f'\t\t\t    Your starting 5 for the upcoming basketball season')
+print(f'\t\t\t    Point Guard: \t\t {pg}')
+print(f'\t\t\t    Shooting Guard: \t\t {sg}')
+print(f'\t\t\t    Small Forward: \t\t {sf}')
+print(f'\t\t\t    Power Forward: \t\t {pf}')
+print(f'\t\t\t    Center: \t\t\t {cn}')
+
+injured = players.pop(2)
+print(f'\nOh no, {injured} is injured.')
+print(f'Your roster only has {len(players)} players.')
+
+sf = input(f'Who will take {injured}\'s spot: ').title()
+players.append(sf)
+
+print(f'\n\t\t\t    Your starting 5 for the upcoming basketball season')
+print(f'\t\t\t    Point Guard: \t\t {pg}')
+print(f'\t\t\t    Shooting Guard: \t\t {sg}')
+print(f'\t\t\t    Small Forward: \t\t {sf}')
+print(f'\t\t\t    Power Forward: \t\t {pf}')
+print(f'\t\t\t    Center: \t\t\t {cn}')
+
+print(f'\nGood luck {sf} you will do great!.')
+print(f'Your roster now has {len(players)} players.')
