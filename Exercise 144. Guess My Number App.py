@@ -9,12 +9,15 @@ guess_number = random.randint(1, 20)
 
 for num in range(1, 6):
     user_guess = int(input('\nTake a guess: '))
+
     if user_guess < guess_number:
         print('Your guess is too low.')
     elif user_guess > guess_number:
         print('Your guess is too high.')
     elif user_guess == guess_number:
-        print(f'\nGood Job, {player}! You guessed my number in {num} guesses!')
         break
-    else:
-        print(f'\nGame Over. The number I was thinking of was {guess_number}.')
+
+if user_guess != guess_number:
+    print(f'\nGame Over. The number I was thinking of was {guess_number}.')
+else:
+    print(f'\nGood job, {player}! You guessed my number in {num} guesses.')
